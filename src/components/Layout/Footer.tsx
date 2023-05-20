@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="px-20 py-10 border-b border-[#3f3f3f] grid grid-cols-5">
         <div className="col-span-3 flex items-center text-[18px]">
           <div>
-            <img src="/assets/logo.png" alt="Factly Logo" />
+            <img src="/assets/logo_alt.svg" alt="Ruspie Logo" />
             <div className="mt-[18px]">A Factly Product.</div>
           </div>
         </div>
