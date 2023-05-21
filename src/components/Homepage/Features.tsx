@@ -61,7 +61,7 @@ export default function Features() {
   return (
     <section>
       <Header />
-      <div className='grid gap-24'>
+      <div className="grid gap-24">
         {features.map((feature, index) => (
           <FeatureItem key={index} {...feature} order={index % 2 === 0} />
         ))}
@@ -92,9 +92,13 @@ const FeatureItem = ({
   image,
 }: FeatureItemProps) => (
   <div
-    className={`flex gap-20 ${order ? '' : 'flex-row-reverse'} justify-between`}
+    className={`flex gap-16 ${order ? '' : 'flex-row-reverse'} justify-between`}
   >
-    <div className='basis-1/2 items-center justify-center flex pl-16'>
+    <div
+      className={`basis-1/2 items-center justify-center flex ${
+        order ? 'pl-16' : 'pr-16'
+      }`}
+    >
       <div className="flex flex-col gap-8 justify-center">
         <div className="flex gap-6 items-center">
           <div className="bg-[#F9F5FF] p-2 rounded-full">

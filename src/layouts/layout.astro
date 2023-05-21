@@ -3,12 +3,25 @@ import Navbar from '@/components/Layout/Navbar';
 import Footer from '@/components/Layout/Footer';
 
 // CSS imports
-import '@fontsource/inter'
-import '@css/globals.css'
+import '@fontsource/inter';
+import '@css/globals.css';
+
+const pathname = Astro.url.pathname
 ---
 
-<Navbar />
-<main>
-  <slot />
-</main>
-<Footer />
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Ruspie</title>
+  </head>
+  <body>
+    <Navbar pathname={pathname} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>
